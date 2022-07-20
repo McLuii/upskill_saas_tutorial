@@ -1,6 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   def create
-    super do |resources|
+    super do |resource|
       if params{:plan}
         resource.plan_id = param[:plan]
         if resource.plan_id == 2
