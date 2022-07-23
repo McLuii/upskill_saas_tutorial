@@ -1,0 +1,6 @@
+User Profiles
+* Each user should have one profile
+* Each user should see a link to new profile form upon signing upon
+* User should be able to create and view their user profile
+* User should have a profile picture
+* User should be able to view all user profiles
