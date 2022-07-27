@@ -18,7 +18,16 @@ class ProfilesController < ApplicationController
       render action: :new
     end
   end
+  # GET requests made to /users/:user_id/profile/edit
+  def edit
+    # Render edit form
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
+  end
   
+  def index
+    
+  end
   private
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
