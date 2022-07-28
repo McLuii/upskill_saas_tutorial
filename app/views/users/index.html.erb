@@ -1,7 +1,9 @@
 
 <div class='container'>
   <div class='row'>
-    <div class='col-md-8 col-md-offset-2'>  
+    <div class='col-md-8 col-md-offset-2'>
+      <h1 class='text-center'>DevMatch Community</h1>
+      <p class='text-center'>Welcome to the DevMatch community. Users must fill out a profile in order to be visible in the community</p>
       <ul class='list-unstyled'>
         <% @users.each do |user|%>
           <% if user.profile %>
@@ -22,8 +24,7 @@
                     <%= user.profile.job_title %>
                     <% if user.plan_id == 2 %>
                       <span class='label label-danger'>PRO</span>
-                    <% else %>
-                      <span class='label label-success'>BASIC</span>
+                    
                     <% end %>
                   </p>
                 </div>
