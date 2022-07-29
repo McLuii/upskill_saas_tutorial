@@ -2,35 +2,38 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>DevMatch</title>
+    <title>VicGig</title>
     
   </head>
   <body>
     <div class="home-callout text-center container-fluid">
-      <h1 class="title">Welcome to DevMatch</h1>
-      <h3>A membership website where entrepreneurs can meet developers</h3>
+      <h1 class="title">Welcome to VicGig</h1>
+      <h3>Helping you add the music!</h3>
     </div>
     <div class= 'container home-signup-links'>
-      <div class='row'>
-        <div class='col-md-6'>
-          <div class='well'>
-            <div class='text-center'>
-            <h2>Basic Membership</h2>
-              <h4>Gain basic access to the DevMatch community</h4>
-              <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+      <% if user_signed_in? %>
+      <% else %>
+        <div class='row'>
+          <div class='col-md-6'>
+            <div class='well'>
+              <div class='text-center'>
+              <h2>I'm an Artist</h2>
+                <h4>Sign up as a musician or band</h4>
+                <%= link_to "Sign up as Artist", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+              </div>
+            </div>
+          </div>
+          <div class='col-md-6'>
+            <div class='well'>
+              <div class='text-center'>
+                <h2>I'm looking for an Artist</h2>
+                <h4>Sign up to see local musicians avaliable fo gigs!</h4>
+                <%= link_to "Sign up as Customer", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+              </div>
             </div>
           </div>
         </div>
-        <div class='col-md-6'>
-          <div class='well'>
-            <div class='text-center'>
-              <h2>Pro Membership</h2>
-              <h4>Sign up for a pro account for $10/month</h4>
-              <%= link_to "Sign up for Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
     
     

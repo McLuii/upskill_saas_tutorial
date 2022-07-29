@@ -1,0 +1,9 @@
+Turning DevMatch into VicGig
+* Replace all DevMatch wording 
+* Create Musician plan and Searching for musicians plan
+* Allow people to create their accounts and make a profile
+* Change dev, ent, inv to solo musician, band, and booker
+* Change styles
+* Create profile specific contact forms?
+* Integrate player for showing music
+* Update ruby and dependencies for push to Heroku
